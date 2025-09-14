@@ -1,42 +1,37 @@
-# BaatCheet – Real-Time Chat Application 2025
+# BaatCheet 💬
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
+BaatCheet is a **real-time chat application** that allows users to communicate seamlessly with each other. Built with a modern full-stack approach, it provides features like authentication, live messaging, user profiles, and media sharing.
 
-[Video Tutorial on Youtube](https://youtu.be/ntKkVrQqBYY)
+---
+<img width="1910" height="1017" alt="Image" src="https://github.com/user-attachments/assets/9988babb-8e73-4b7c-bc22-ea09b341e8e6" />
 
-Highlights:
+## 🌟 Features
 
-- 🌟 Tech stack: MERN + Socket.io + TailwindCSS + Daisy UI
-- 🎃 Authentication && Authorization with JWT
-- 👾 Real-time messaging with Socket.io
-- 🚀 Online user status
-- 👌 Global state management with Zustand
-- 🐞 Error handling both on the server and on the client
-- ⭐ At the end Deployment like a pro for FREE!
-- ⏳ And much more!
+- **User Authentication:** Secure sign-up and login system.
+- **Real-time Messaging:** Instant messaging using WebSockets.
+- **User Profiles:** View and update profile information.
+- **Media Sharing:** Send images and files in chat.
+- **Responsive Design:** Works on both desktop and mobile devices.
+- **Private and Group Chats:** Create group chats and private conversations.
 
-### Setup .env file
+---
 
-```js
-MONGODB_URI=...
-PORT=5001
-JWT_SECRET=...
+## 🛠️ Tech Stack
 
-CLOUDINARY_CLOUD_NAME=...
-CLOUDINARY_API_KEY=...
-CLOUDINARY_API_SECRET=...
+**Frontend:**  
+- React.js  
+- Tailwind CSS  
+- Vite  
 
-NODE_ENV=development
-```
+**Backend:**  
+- Node.js  
+- Express.js  
+- MongoDB (Mongoose)  
+- Socket.io  
 
-### Build the app
+**Other Tools:**  
+- Cloudinary (for image storage)  
+- JWT (for authentication)  
+- Axios (for API requests)
 
-```shell
-npm run build
-```
-
-### Start the app
-
-```shell
-npm start
-```
+---
