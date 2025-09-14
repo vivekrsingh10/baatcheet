@@ -36,3 +36,28 @@ BaatCheet is a **real-time chat application** that allows users to communicate s
 
 ---
 
+baatcheet/
+├── backend/              # Node.js + Express API
+│   ├── src/
+│   │   ├── controllers/   # Logic for auth & messages
+│   │   ├── models/        # MongoDB models
+│   │   ├── routes/        # API routes
+│   │   └── lib/           # Utils, DB connection, Cloudinary
+│   └── package.json
+├── frontend/             # React frontend
+│   ├── src/
+│   │   ├── components/    # UI components
+│   │   ├── pages/         # Pages like Login, Home, Profile
+│   │   ├── store/         # Zustand stores
+│   │   └── lib/           # Axios instance, helpers
+│   └── package.json
+├── README.md
+└── .gitignore
+
+💡 Future Improvements
+
+-Add video and voice calling.
+-Implement typing indicators.
+-Push notifications for new messages.
+-Emojis, reactions, and message reactions.
+-Dark mode toggle.
