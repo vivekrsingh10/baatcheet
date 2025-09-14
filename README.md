@@ -3,6 +3,7 @@
 BaatCheet is a **real-time chat application** that allows users to communicate seamlessly with each other. Built with a modern full-stack approach, it provides features like authentication, live messaging, user profiles, and media sharing.
 
 ---
+<img width="1910" height="1017" alt="Image" src="https://github.com/user-attachments/assets/9988babb-8e73-4b7c-bc22-ea09b341e8e6" />
 
 ## 🌟 Features
 
