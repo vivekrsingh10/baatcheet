@@ -1,5 +1,8 @@
 # BaatCheet 💬
 
+## 🚀 Live Demo
+👉 [BaatCheet App](https://baatcheet-seven.vercel.app/)
+
 BaatCheet is a **real-time chat application** that allows users to communicate seamlessly with each other. Built with a modern full-stack approach, it provides features like authentication, live messaging, user profiles, and media sharing.
 
 ---
