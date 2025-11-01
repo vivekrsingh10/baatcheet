@@ -18,7 +18,10 @@ const __dirname = path.resolve();
 // Debug log
 console.log("DEBUG MONGO_URI:", process.env.MONGO_URI);
 
-app.use(express.json());
+// Increase body size limit to 25 MB
+app.use(express.json({ limit: "25mb" }));
+app.use(express.urlencoded({ extended: true, limit: "25mb" }));
+
 app.use(cookieParser());
 app.use(
   cors({

@@ -13,7 +13,7 @@ export const signup = async (req, res) => {
     if (password.length < 6) {
       return res.status(400).json({ message: "Password must be at least 6 characters" });
     }
-
+    
     const user = await User.findOne({ email });
 
     if (user) return res.status(400).json({ message: "Email already exists" });
@@ -23,6 +23,7 @@ export const signup = async (req, res) => {
 
     const newUser = new User({
       fullName,
+      username: fullName,
       email,
       password: hashedPassword,
     });
@@ -31,10 +32,11 @@ export const signup = async (req, res) => {
       // generate jwt token here
       generateToken(newUser._id, res);
       await newUser.save();
-
+      
       res.status(201).json({
         _id: newUser._id,
         fullName: newUser.fullName,
+        username: newUser.fullName,
         email: newUser.email,
         profilePic: newUser.profilePic,
       });
@@ -87,6 +89,7 @@ export const logout = (req, res) => {
 
 export const updateProfile = async (req, res) => {
   try {
+    console.log("req.body:", req.body);
     const { profilePic } = req.body;
     const userId = req.user._id;
 
@@ -94,7 +97,12 @@ export const updateProfile = async (req, res) => {
       return res.status(400).json({ message: "Profile pic is required" });
     }
 
-    const uploadResponse = await cloudinary.uploader.upload(profilePic);
+    const uploadResponse = await cloudinary.uploader.upload(profilePic, {
+      folder: "baatcheet_profiles",
+      timeout: 60000, // 60 seconds
+      resource_type: "auto",
+    });
+
     const updatedUser = await User.findByIdAndUpdate(
       userId,
       { profilePic: uploadResponse.secure_url },
