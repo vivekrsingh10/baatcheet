@@ -25,7 +25,10 @@ app.use(express.urlencoded({ extended: true, limit: "25mb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173", // local frontend
+      "https://baatcheet-seven.vercel.app", // your deployed frontend domain
+    ],
     credentials: true,
   })
 );
